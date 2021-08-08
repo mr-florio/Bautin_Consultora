@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bautin Consultora</title>
+    <link rel="stylesheet" href="css/Style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;1,300;1,500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <!-- Aquí irá un navegador con 5 botones -->
+      <nav class="navegacion">
+        <div>
+          <h1 id="header__title">Bautin Consultora</h1>
+        </div>
+        <ul class="menu">
+          <li><a href="Index.html">Home</a></li>
+          <li>
+            <a href="Consultoria.html">Consultoría</a>
+            <ul class="submenu">
+              <li>
+                <a href="Consultoria.html#projectManagement"
+                  >Project Management</a
+                >
+              </li>
+              <li><a href="Consultoria.html#coaching">Coaching</a></li>
+              <li>
+                <a href="Consultoria.html#dataAnalytics">Data Analytics & BI</a>
+              </li>
+              <li>
+                <a href="Consultoria.html#procesos">Procesos & Calidad</a>
+              </li>
+            </ul>
+          </li>
+          <li><a href="Nosotros.html">Nosotros</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+    <main>
+      <section>
+        <img id="contacto__img" src="assets/contactus.png" alt="Dibujo de una asistente de atención al cliente">
+        <div id="contacto__encabezado__formulario">
+          <h1 id="contacto__h1">Contacto</h1>
+          <p id="contacto__parrafo">
+          Dejanos tu consulta y nos pondremos en contacto contigo a la brevedad
+          </p>
+        </div>
+        <!--A este formulario intentaré darle una forma más bonita en el futuro, cuando aprenda a utilizar mas recursos de diseño-->
+        <div id="form__border">
+          <form>
+            <div id="form__datospersonales">
+              <label for="nombre">Nombre</label>
+              <input type="text" name="nombre" placeholder="Nombre y Apellido" />
+              <label for="email">Correo electrónico</label>
+              <input type="email" name="email" placeholder="tucorreo@gmail.com" />
+              <label for="teléfono">Celular o Whatsapp</label>
+              <input type="text" name="teléfono" placeholder="(011)6754-4545" />
+            </div>  
+            <div id="form__tipocliente">
+              <div>PyME</div>
+              <input type="radio" name="tipoDeCliente" value="PyME" />
+              <div>Corporación</div>
+              <input type="radio" name="tipoDeCliente" value="Corporación" />
+              <div>Profesional Independiente</div>
+              <input type="radio" name="tipoDeCliente" value="Profesional" />
+            </div>
+            <div id="form__tipodeservicio">
+              <div>Seleccioná el tipo de servicio que necesitas</div>
+              <select name="tipoDeServicio">
+              <option value="ProjectManagement">Project Management</option>
+              <option value="Coaching">Coaching</option>
+              <option value="DataAnalytics">Data Analytics & BI</option>
+              <option value="Procesos">Procesos & Calidad</option>
+              </select>
+            </div>
+            <div id="form__dialogo"> 
+              <textarea
+            name="mensaje"
+            id="form__mensaje"
+            cols="50"
+            rows="15"
+            placeholder="Dejanos tu mensaje"
+              ></textarea>
+              <div>Quiero estar al tanto de las novedades</div>
+              <input type="checkbox" name="acepta" value="1" />
+            </div>  
+              <div id="form__buttons">
+              <input id="Button__Enviar" type="submit" value="Enviar" />  
+              <input id="Button__Borrar" type="reset" value="Borrar" />
+              <input id="Button__Javascript" type="button" value="Javascript" />
+            </div>  
+          </form>
+        </div>
+      </section>
+    </main>
+    <br />
+    <br />
+
+    <br />
+    <br />
+    <br />
+      <footer>
+        <!-- En el pie de página se ubicarán datos legales y algunos íconos con link a redes, email y whatsapp -->
+        <div class="footer">
+          <small id="footer__copyright">
+            © Bautin Consultora - Todos los derechos reservados
+          </small>
+        </div>
+        <div id="footer__contacts">
+          <a href="mailto:agustin.n.florio@gmail.com" target="_blank">
+            <img
+              src="https://www.ramosmejia.com/wp-content/uploads/2017/11/mail-logo.png"
+              alt="no se encontró la imagen"
+              height="50"
+              width="40"
+            />
+          </a>
+          <a href="https://www.linkedin.com/in/consultingflorio/" target="_blank">
+            <img
+              src="https://indyme.com/wp-content/uploads/2017/07/LinkedIn-Icon.png"
+              alt="no se encontró la imagen"
+              height="40"
+              width="40"
+            />
+          </a>
+          <a href="https://www.facebook.com/agustin.florio.737" target="_blank">
+            <img
+              src="https://i.pinimg.com/originals/f6/6d/49/f66d49097e18978ddf46282c233040a9.png"
+              alt="no se encontró la imagen"
+              height="50"
+              width="50"
+            />
+          </a>
+          <a href="https://wa.me/5491165535306" target="_blank">
+            <img
+              src="https://es.logodownload.org/wp-content/uploads/2018/10/whatsapp-logo-11-1019x1024.png"
+              alt="no se encontró la imagen"
+              height="50"
+              width="50"
+            />
+          </a>
+        </div>
+      </footer>
+  </body>
+</html>

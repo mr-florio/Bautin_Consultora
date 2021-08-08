@@ -1,0 +1,501 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+
+body {
+  background: white;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  background-image: url(bg-index.jpg);
+  background-repeat: no-repeat;
+}
+
+/* Header & Navigation Bar */
+
+#header__title {
+  position: absolute;
+  font-size: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-left: 90px;
+  padding: 10px 20px;
+  color: #04b2d9;
+  font-weight: 500;
+}
+
+.navegacion {
+  width: 100%;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(246, 246, 246, 1) 47%,
+    rgba(237, 237, 237, 1) 100%
+  );
+  margin-bottom: 30px;
+  border-bottom: 1px solid #d93d4a;
+}
+
+.navegacion ul {
+  list-style: none;
+}
+
+.menu > li {
+  position: relative;
+  left: 800px;
+  display: inline-block;
+}
+
+.menu > li > a {
+  display: block;
+  padding: 15px 20px;
+  color: #04b2d9;
+  text-decoration: none;
+}
+
+.menu li a:hover {
+  color: #f2790f;
+  transition: all 0.3s;
+}
+
+/* Submenu */
+
+.submenu {
+  position: absolute;
+  background: white;
+  width: 145%;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1.5s;
+}
+
+.submenu li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: #04b2d9;
+}
+
+.menu li:hover .submenu {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Index Main */
+
+.main__principaltitle {
+  text-align: center;
+  font-weight: 500;
+  font-size: 20px;
+  color: #3b3b40;
+  position: relative;
+  padding: 10px;
+  font-style: italic;
+}
+
+.main__principaltitle strong {
+  animation-name: exclamation;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+  transition: ease-out;
+}
+
+/*Main Title Animation */
+
+@keyframes exclamation {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+.main__principaltext {
+  text-align: center;
+  line-height: 25px;
+  color: #3b3b40;
+  padding: 30px;
+}
+
+#indexmain__image {
+  width: 100%;
+  height: 400px;
+  border: 1px solid #56c3db;
+}
+
+/*Index Circle´s Section*/
+
+.circle {
+  position: relative;
+  border-radius: 50%;
+  width: 14%;
+  height: 0;
+  padding-top: 14%;
+  background: #56c3db;
+  border: 2px solid #04b2d9;
+  margin: 10px;
+}
+
+@media only screen and (min-width: 1224px) {
+  .circle a {
+    position: absolute;
+    top: 40%;
+    left: 5px;
+    width: 95%;
+    height: 95%;
+    text-align: center;
+    color: #3b3b40;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .circle a {
+    position: relative;
+    width: 95%;
+    height: 95%;
+    text-align: center;
+  }
+}
+
+.wrap {
+  text-align: center;
+  margin: 20px;
+  position: relative;
+}
+
+.wrap:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  border-top: 2px solid #04b2d9;
+  background: #3b3b40;
+  width: 80%;
+  transform: translate(10%, -25%);
+}
+
+.align-circles {
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* Transición en Círculos del Index */
+/* Configuré la transición con valores bajos para poder generar cambios sutiles y naturales */
+
+.circle a {
+  transition: 0.2s;
+  text-decoration: none;
+}
+.circle a:hover {
+  transform: scale(1.1, 1);
+  color: whitesmoke;
+}
+
+/* Consultoria Page */
+
+.consultoria__images {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 400px;
+  width: 600px;
+}
+
+/* Nosotros Page */
+
+#nosotros__main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 120px 400px 250px 220px;
+  grid-gap: 10px;
+  grid-template-areas:
+    "principaltext principaltext principaltext"
+    "fotoCEO fotoCTO fotoCRO"
+    "pieCEO pieCTO pieCRO"
+    "valores valores valores";
+}
+
+#maintext {
+  grid-area: principaltext;
+  font-size: 16px;
+  margin: 0 10%;
+  font-style: italic;
+  color: #3b3b40;
+  font-weight: 500;
+  text-align: justify;
+  background-color: rgba(27, 124, 146, 0.07);
+  padding: 15px;
+  border-radius: 3%;
+}
+
+#main__fotoCEO {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 1px solid #56c3db;
+  grid-area: fotoCEO;
+  margin: auto;
+  transition: 0.8s;
+}
+
+/* Foto CEO Transition */
+
+#main__fotoCEO:hover {
+  filter: saturate(130%);
+  transform: scale(1.3, 1.3);
+}
+
+#main__fotoCTO {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 1px solid #56c3db;
+  grid-area: fotoCTO;
+  margin: auto;
+  transition: 0.8s;
+}
+
+/* Foto CTO Transition */
+
+#main__fotoCTO:hover {
+  filter: saturate(130%);
+  transform: scale(1.3, 1.3);
+}
+
+#main__fotoCRO {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 1px solid #56c3db;
+  grid-area: fotoCRO;
+  margin: auto;
+  transition: 0.8s;
+}
+
+/* Foto CRO Transition */
+
+#main__fotoCRO:hover {
+  filter: saturate(130%);
+  transform: scale(1.3, 1.3);
+}
+
+/* Pie de cada Foto */
+
+#piedefotoCEO {
+  background-color: rgba(27, 124, 146, 0.07);
+  border-radius: 3%;
+}
+
+#piedefotoCEO--nombre {
+  text-align: center;
+  line-height: 20px;
+  color: #3b3b40;
+  padding: 10px;
+  grid-area: pieCEO;
+}
+
+#piedefotoCEO--rol {
+  text-align: center;
+  line-height: 20px;
+  color: #3b3b40;
+  padding: 10px;
+  grid-area: pieCEO;
+}
+
+#piedefotoCEO--texto {
+  text-align: center;
+  line-height: 20px;
+  color: #3b3b40;
+  padding: 10px;
+  grid-area: pieCEO;
+}
+
+ul {
+  list-style-type: none;
+}
+
+#piedefotoCTO {
+  background-color: rgba(27, 124, 146, 0.07);
+  border-radius: 3%;
+}
+
+#piedefotoCTO--nombre {
+  text-align: center;
+  line-height: 20px;
+  color: #3b3b40;
+  padding: 10px;
+  grid-area: pieCEO;
+}
+
+#piedefotoCTO--rol {
+  text-align: center;
+  line-height: 20px;
+  color: #3b3b40;
+  padding: 10px;
+  grid-area: pieCEO;
+}
+
+#piedefotoCTO--texto {
+  text-align: center;
+  line-height: 20px;
+  color: #3b3b40;
+  padding: 10px;
+  grid-area: pieCEO;
+}
+
+#piedefotoCRO {
+  background-color: rgba(27, 124, 146, 0.07);
+  border-radius: 3%;
+}
+
+#piedefotoCRO--nombre {
+  text-align: center;
+  line-height: 20px;
+  color: #3b3b40;
+  padding: 10px;
+  grid-area: pieCEO;
+}
+
+#piedefotoCRO--rol {
+  text-align: center;
+  line-height: 20px;
+  color: #3b3b40;
+  padding: 10px;
+  grid-area: pieCEO;
+}
+
+#piedefotoCRO--texto {
+  text-align: center;
+  line-height: 20px;
+  color: #3b3b40;
+  padding: 10px;
+  grid-area: pieCEO;
+}
+
+/* Section "Nuestros Valores" */
+
+#section__valores {
+  grid-area: valores;
+  text-align: justify;
+  font-size: 16px;
+  margin: 0 10%;
+  font-style: italic;
+  color: #3b3b40;
+  font-weight: 500;
+  background-color: rgba(27, 124, 146, 0.07);
+  border-radius: 3%;
+  padding: 15px;
+}
+
+#valores__titulo {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Footer */
+
+.footer {
+  border-top: 1px solid #d93d4a;
+  position: relative;
+  margin-top: 200px;
+}
+
+#footer__copyright {
+  position: absolute;
+  margin-top: 20px;
+}
+
+#footer__contacts {
+  position: relative;
+  float: right;
+}
+
+/* Contacto */
+
+#contacto__img {
+  display: block;
+  margin: auto;
+}
+
+/* Contact Form */
+
+#form__border {
+  background-color: rgba(27, 124, 146, 0.07);
+  border-radius: 3%;
+}
+
+#contacto__encabezado__formulario {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 70px;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+#form__datospersonales {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  height: 100px;
+  width: 70%;
+  margin: auto;
+}
+
+#form__tipocliente {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
+  margin: auto;
+}
+
+#form__tipodeservicio {
+  display: flex;
+  justify-content: space-evenly;
+  width: 40%;
+  height: 20px;
+  margin: 30px auto;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+#form__dialogo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: auto;
+  height: 160px;
+}
+
+#form__mensaje {
+  width: 50%;
+  height: 100px;
+}
+
+#form__dialogo div {
+  font-size: 14px;
+  font-style: italic;
+}
+
+#form__buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 20%;
+  margin: 20px auto;
+}
+
+#Button__Borrar {
+  order: -1;
+}
+/* Contacto */
